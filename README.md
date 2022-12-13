@@ -23,13 +23,12 @@
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
 
+Name of feature: Lab 11
 
-Name of feature: ________________________________
+Estimate of time needed to complete: 4:00
 
-Estimate of time needed to complete: _____
+Start time: 3:00
 
-Start time: _____
+Finish time: 8:30
 
-Finish time: _____
-
-Actual time needed to complete: _____
+Actual time needed to complete: 5:30
