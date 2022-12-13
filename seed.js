@@ -2,7 +2,7 @@
 
 require('dotenv').config();
 const mongoose = require('mongoose');
-const Books = require('./components/Book.js');
+const Books = require('./models/Book.js');
 const MONGO_URL = process.env.MONGO_URL;
 
 mongoose.connect(MONGO_URL);

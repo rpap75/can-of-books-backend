@@ -7,7 +7,6 @@ const MONGODB_URL = process.env.MONGODB_URL;
 
 mongoose.connect(MONGODB_URL);
 
-// Use a differnet method on the Cats model.
 Books.find()
   .then(results => {
     console.log('Here are all of our books', results);
