@@ -23,7 +23,7 @@
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
 
-Name of feature: Lab 11
+## Name of feature: Lab 11
 
 Estimate of time needed to complete: 4:00
 
@@ -32,3 +32,23 @@ Start time: 3:00
 Finish time: 8:30
 
 Actual time needed to complete: 5:30
+
+## Logistical
+
+1. School Hours 9am - 7pm.
+2. Slack.
+3. When needed.
+4. Work later hours.
+
+## Cooperative
+
+1. Deiosha - Organization. Ryan - Styling.
+2. We can stay on task and creating a site that is presentable.
+3. Deiosha - React. Ryan - React.
+4. We will talk through the code from start to finish to understand what is happening.
+
+## Conflict Resolution
+
+1. Communicate about the issue to each other and if that dosen't work, talk to instructor.
+2. Communicate about the issue to each other and if that dosen't work, talk to instructor.
+3. Working together and doing the driver/ navigate approach.
