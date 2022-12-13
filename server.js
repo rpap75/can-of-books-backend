@@ -4,7 +4,7 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
-const Books = require('./components/Book.js');
+const Books = require('./models/Book.js');
 const dataBase = mongoose.connection;
 mongoose.connect(process.env.MONGO_URL);
 dataBase.once('open', () => console.log('connected to mongo'));
