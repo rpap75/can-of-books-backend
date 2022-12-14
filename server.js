@@ -8,6 +8,7 @@ const Books = require('./models/Book.js');
 const { response } = require('express');
 const dataBase = mongoose.connection;
 mongoose.connect(process.env.MONGO_URL);
+
 dataBase.once('open', () => console.log('connected to mongo'));
 
 const PORT = process.env.PORT || 3002;
@@ -40,10 +41,10 @@ app.post('/books', async (request, respond) => {
 })
 
 app.delete('/books/:id', async (request, response) => {
-  console.log(request.params._id)
+  console.log(request.params.id)
   try {
-    let id = request.params._id
-    let deletedBook = await books.findByIdAndDelete(id)
+    let id = request.params.id
+    let deletedBook = await Books.findByIdAndDelete(id)
     console.log('here is the value of id: ', id)
     response.send(deletedBook).status(200)
   } catch (error) {
