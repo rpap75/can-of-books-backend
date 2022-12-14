@@ -45,9 +45,9 @@ app.delete('/books/:id', async (request, response) => {
     let id = request.params._id
     let deletedBook = await books.findByIdAndDelete(id)
     console.log('here is the value of id: ', id)
-    response.send(deletedBook)
+    response.send(deletedBook).status(200)
   } catch (error) {
-    response.send(error);
+    response.send(error).status(500);
   }
 })
 
