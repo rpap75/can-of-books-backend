@@ -11,19 +11,19 @@ async function seedDataBase() {
   await Books.create({
     title: 'The 48 Laws of Power',
     description: 'this is the descrition',
-    status: 'this is the status',
+    status: 'read',
   })
 
   await Books.create({
     title: 'The Scarlet Letter',
     description: 'this is the descrition',
-    status: 'this is the status',
+    status: 'not started',
   })
 
   await Books.create({
     title: 'Atomic Habbits',
     description: 'this is the descrition',
-    status: 'this is the status',
+    status: 'in-progress',
   })
   console.log('books added');
 
