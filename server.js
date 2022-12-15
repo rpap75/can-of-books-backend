@@ -5,7 +5,7 @@ const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const Books = require('./models/Book.js');
-const { response } = require('express');
+const { response, request } = require('express');
 const dataBase = mongoose.connection;
 mongoose.connect(process.env.MONGO_URL);
 
@@ -13,7 +13,6 @@ dataBase.once('open', () => console.log('connected to mongo'));
 
 const PORT = process.env.PORT || 3002;
 const app = express();
-
 
 app.use(express.json());
 app.use(cors());
@@ -31,7 +30,6 @@ app.get('/books', async (req, res) => {
 })
 
 app.post('/books', async (request, respond) => {
-  // request.body;
 
   console.log(request.body);
 
@@ -52,7 +50,12 @@ app.delete('/books/:id', async (request, response) => {
   }
 })
 
-
+app.put('/books/:id', async (request, response) => {
+  let id = request.params.id
+  let updatedBook = await Books.findByIdAndUpdate({ _id: id }, request.body);
+  console.log('hello hello hello', id);
+  response.send(updatedBook);
+})
 
 app.listen(PORT, () => console.log(`listening on ${PORT}`));
 
