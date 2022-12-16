@@ -3,19 +3,21 @@
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
-const mongoose = require('mongoose');
 const Books = require('./models/Book.js');
 const { response, request } = require('express');
+const PORT = process.env.PORT || 3002;
+const app = express();
+const mongoose = require('mongoose');
 const dataBase = mongoose.connection;
+const authorize = require('./auth/authorize');
+
 mongoose.connect(process.env.MONGO_URL);
 
 dataBase.once('open', () => console.log('connected to mongo'));
-
-const PORT = process.env.PORT || 3002;
-const app = express();
-
 app.use(express.json());
 app.use(cors());
+app.use(authorize);
+
 
 app.get('/books', async (req, res) => {
   let results = [];
